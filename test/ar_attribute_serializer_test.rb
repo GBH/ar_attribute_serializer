@@ -34,14 +34,14 @@ class LetMeInTest < Test::Unit::TestCase
     assert model.respond_to?(:data)
     assert model.respond_to?(:attr_1)
     assert model.respond_to?(:attr_2)
-    
     assert_equal nil, model.attr_1
     assert_equal nil, model.attr_2
     
-    model.attr_0 = 'data_0'
-    model.attr_1 = 'data_1'
-    model.attr_2 = 'data_2'
-    
+    model = Model.new(
+      :attr_0 => 'data_0',
+      :attr_1 => 'data_1',
+      :attr_2 => 'data_2'
+    )
     assert_equal ({ :attr_1 => 'data_1', :attr_2 => 'data_2' }), model.data
     assert_equal 'data_0', model.attr_0
     assert_equal 'data_1', model.attr_1

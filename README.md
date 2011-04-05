@@ -11,8 +11,21 @@ Define the following in your Gemfile and run `bundle install`
     
 Usage
 -----
+Define a field that is going to be used for storing serialized data and a list of attributes:
 
+    class Model  < ActiveRecord::Base
+      attribute_serializer :serialized_data, :apple, :orange, :banana
+    end
+    
+Then you can use those serialized attributes:
 
+    >> model = Model.new(:apple => 'red')
+    >> model.apple
+    => red
+    >> model.orange = 'orange'
+    >> model.banana = 'yellow'
+    >> model.serialized_data
+    => {:apple => 'red', :orange => 'orange', :banana => 'yellow' }
 
 Copyright
 =========
