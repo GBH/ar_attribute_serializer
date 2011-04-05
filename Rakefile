@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name        = 'letmein'
+  gem.name        = 'ar_attribute_serializer'
   gem.homepage    = 'http://github.com/GBH/ar_attribute_serializer'
   gem.license     = 'MIT'
-  gem.summary     = 'Serialization for AR Model accessors'
-  gem.description = 'Serialization for AR Model accessors'
+  gem.summary     = 'Attribute serializer for AR models'
+  gem.description = 'Attribute serializer for AR models'
   gem.email       = "oleg@khabarov.ca"
   gem.authors     = ['Oleg Khabarov']
   # Include your dependencies below. Runtime dependencies are required when using your gem,
